@@ -3,22 +3,24 @@ body, html {
     margin: 0;
 }
 
+.background {
+    position: relative;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/originals/ef/31/da/ef31da3aac21d75fede9d3ca00b8f14f.jpg');
+    background-repeat: repeat;
+    background-size: 10%;
+    z-index: 1;
+    display: flex;
+}
+
 .container {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     max-width: 400px;
     background-color: rgba(255, 255, 255, 1);
-    padding: 23px;
-}
-
-.background {
-    background-image: url('https://i.pinimg.com/originals/ef/31/da/ef31da3aac21d75fede9d3ca00b8f14f.jpg'); /* Ganti 'gambar-latar.jpg' dengan path atau URL gambar Anda */
-    background-repeat: repeat;
-    background-size: 10%;
-    position: relative;
-    height: 100%;
+    padding: 10px;
 }
 
 label {
@@ -36,14 +38,29 @@ input {
     background-color: none;
 }
 
-.submit {
+#submit {
     background-color: white;
+    outline: none;
+    border: solid #F9D8DA;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 7px;
+    font-size: small;
+    background-color: none;
 }
 
-.submit:active {
+#submit:active {
     transition: transform 0.2s;
     transform: scale(0.95);
     background-color: #dbaeaf;
+}
+
+#submit:hover {
+    border-color:#E2BCBD;
+}
+
+#submit:focus {
+    border: solid #E2BCBD;
 }
 
 input:hover {
@@ -51,9 +68,29 @@ input:hover {
 }
 
 input:focus {
-    border: solid #E2BCBD
+    border: solid #E2BCBD;
 }
 
+#content {
+    position: relative;
+    text-align: center;
+    z-index: 2; /* Pastikan konten berada di atas latar belakang */
+    animation: popUp 5s ease-in-out forwards;
+}
 
+@keyframes popUp {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
+img {
+    max-width: 50%;
+    height: auto;
+}
 

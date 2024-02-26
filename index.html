@@ -7,18 +7,22 @@
     <title>meme</title>
 </head>
 <body>
-    <div class="background">
-        <div class="container">
-            <form>
+    <div class="background" id="background">
+        <div class="container" id="container">
+            <form id="memeform">
                 <label for="tittle">ketik 1 untuk melihat meme-mu hari ini</label>
                 <br>
                 <label for="tittle">ketik 2 jika kamu sedang sedih</label>
                 <br>
-                <input type="text" id="ketik">
+                <input type="text" id="ketik"></label>
                 <br>
-                <input class="submit" type="submit" value="dah">
+                <button id="submit" type="submit">dah</button>
             </form>
         </div>
+        <div id="content">
+            <p class="tulisan"></p>
+        </div>                
     </div>
+    <script src="js/index.js"></script>
 </body>
 </html>
